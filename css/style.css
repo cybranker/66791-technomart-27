@@ -51,17 +51,23 @@
   --basic-red-extra-dark: #ca2c37;
   --basic-red-dark: #ba2732;
   --basic-red: #ee3643;
+  --basic-darkgreen: #518534;
+  --basic-green-extra-dark: #367315;
   --basic-green-dark: #5fbb2d;
   --basic-green: #63a63e;
   --basic-green-light: #8ed78f;
   --basic-blue-extra-dark: #212a3a;
   --basic-blue-dark: #161d29;
   --basic-blue: #32425c;
+  --basic-blue-light: #f2f6f8;
   --basic-grey-extra-dark: #293449;
   --basic-grey-dark: #3d546f;
   --basic-grey: #c5c5c5;
   --basic-grey-light: #f1f5f7;
   --basic-grey-extra-light: #f3f7f9;
+  --basic-lightgrey-dark: #a9a9a9;
+  --basic-lightgrey: #e5e5e5;
+  --basic-lightgrey-light: #eaeaea;
   --basic-white: #ffffff;
 
   --special-yellow: #ffbf47;
@@ -126,6 +132,7 @@ img {
 .main-header-logo,
 .main-footer-logo {
   display: inline-block;
+
   background-color: var(--basic-red);
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -171,14 +178,25 @@ img {
   background-color: var(--basic-blue-dark);
 }
 
+.main-basket-active p {
+  background-color: var(--basic-red);
+}
+
 .main-basket a {
   color: var(--basic-white);
 
   background-color: var(--basic-green);
 }
 
+.main-basket a:hover,
+.main-basket a:focus {
+  background-color: var(--basic-green-dark);
+}
+
 .main-basket a:active {
   color: rgba(255, 255, 255, 0.5);
+
+  background-color: var(--basic-green);
 }
 
 .promo {
@@ -231,6 +249,45 @@ img {
   color: var(--basic-grey);
 }
 
+.personal-account-wrapper {
+  background-color: var(--basic-white);
+}
+
+.personal-account-wrapper a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.personal-account-wrapper button {
+  vertical-align: middle;
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.user-nav {
+  list-style: none;
+}
+
+.user-nav a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-blue);
+}
+
+.user-nav a:hover,
+.user-nav a:focus {
+  color: var(--basic-red);
+}
+
+.personal-account-wrapper a:active,
+.user-nav a:active {
+  color: var(--basic-grey);
+}
+
 .main-navigation {
   font-size: 18px;
   line-height: 24px;
@@ -277,34 +334,205 @@ img {
 }
 
 .btn {
+  font-family: "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.link-btn {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+
+  background-color: var(--basic-red);
+}
+
+.link-btn:hover,
+.link-btn:focus {
+  background-color: var(--basic-red-extra-dark);
+}
+
+.link-btn:active {
+  background-color: var(--basic-red-dark);
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: var(--basic-blue);
+  text-transform: uppercase;
+
+  background-color: var(--basic-blue-light);
+}
+
+.filters legend {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.filters ul {
+  list-style: none;
+}
+
+.filter-input-checkbox + label,
+.filter-input-radio + label {
+  font-size: 15px;
+  line-height: 19px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  opacity: 0.4;
+}
+
+.catalog-btn {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-lightgrey);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.catalog-btn:hover,
+.catalog-btn:focus {
+  border-color: var(--basic-grey);
+}
+
+.catalog-btn:active {
+  border-color: var(--basic-red);
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  border: 1px solid var(--basic-lightgrey-light);
+}
+
+.catalog-item:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.flag-new {
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   font-family: "Cuprum", "Arial", sans-serif;
-  vertical-align: middle;
   text-align: center;
   color: var(--basic-white);
   text-transform: uppercase;
 
   background-color: var(--basic-red);
-  border: none;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--basic-red-extra-dark);
+.catalog-item-image {
+  text-align: center;
 }
 
-.btn:active {
-  background-color: var(--basic-red-dark);
+.catalog-item-btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+
+  border-radius: 2px;
+}
+
+.catalog-item-buy-btn {
+  color: var(--basic-white);
+
+  background-color: var(--basic-green);
+  box-shadow: inset 0 -3px 0 var(--basic-green-extra-dark);
+}
+
+.catalog-item-buy-btn:hover,
+.catalog-item-buy-btn:focus {
+  background-color: var(--basic-green-dark);
+}
+
+.catalog-item-buy-btn:active {
+  background-color: var(--basic-darkgreen);
+}
+
+.catalog-item-bookmarks-btn {
+  color: var(--basic-blue);
+
+  border: 3px solid var(--basic-green);
+}
+
+.catalog-item-bookmarks-btn:hover,
+.catalog-item-bookmarks-btn:focus {
+  border-color: var(--basic-blue);
+}
+
+.catalog-item-bookmarks-btn:active {
+  opacity: 0.5;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.catalog-item-price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.catalog-item-price del {
+  color: var(--basic-lightgrey-dark);
+}
+
+.catalog-item-price ins {
+  color: var(--basic-white);
+  text-decoration: none;
+
+  background-color: var(--basic-red);
 }
 
 .main-footer {
   font-style: normal;
   font-weight: 400;
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-grey-extra-light);
+
   background-color: var(--basic-grey-extra-dark);
 }
 
@@ -327,6 +555,7 @@ img {
 
 .footer-site-navigation a:active {
   text-decoration: none;
+
   opacity: 0.5;
 }
 
