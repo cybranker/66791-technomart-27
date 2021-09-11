@@ -70,10 +70,13 @@
   --basic-lightgrey-light: #eaeaea;
   --basic-white: #ffffff;
 
+  --special-yellow-dark: #ffc047;
   --special-yellow: #ffbf47;
   --special-yellow-light: #ffd180;
   --special-blue: #3bbce3;
   --special-lilac: #dc91d8;
+  --special-lightgrey: #f9f5f0;
+  --special-grey: #405069;
 }
 
 .visually-hidden {
@@ -323,6 +326,175 @@ img {
   line-height: 30px;
   font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
+}
+
+.special-offers-list {
+  list-style: none;
+}
+
+.special-offer-materials {
+  background-color: var(--special-yellow);
+}
+
+.special-offer-tool {
+  background-color: var(--special-blue);
+}
+
+.special-offer-technique {
+  background-color: var(--special-lilac);
+}
+
+.special-offer-discounts {
+  background-color: var(--basic-green-light);
+}
+
+.special-offer-delivery {
+  background-color: var(--special-yellow-dark);
+}
+
+.special-offers-list h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.special-offers-list a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.special-offers-list a:hover,
+.special-offers-list a:focus {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+.special-offers-list a:active {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+.slider-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.slider-list {
+  list-style: none;
+}
+
+.slider-item {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slide-perforators {
+  background-image: url("../img/slide-1.jpg");
+}
+
+.slide-drills {
+  background-image: url("../img/slide-2.jpg");
+}
+
+.slide-item-wrapper {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.slide-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-white);
+}
+
+.slide-excerpt {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.title-wrapper {
+  background-color: var(--special-lightgrey);
+}
+
+.title-wrapper .title {
+  color: var(--basic-blue);
+}
+
+.manufacturers-list {
+  list-style: none;
+}
+
+.manufacturer-item {
+  border: 1px solid var(--basic-lightgrey-light);
+}
+
+.services {
+  background-color: var(--basic-grey-light);
+}
+
+.services-btn {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  border: none;
+  box-shadow: 0 1px 0 var(--basic-grey-extra-dark), inset 0 1px 0 var(--special-grey);
+  cursor: pointer;
+}
+
+.services-btn:not(.services-btn-current):hover,
+.services-btn:not(.services-btn-current):focus {
+  background-color: var(--basic-grey-extra-dark);
+}
+
+.services-btn-current {
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
+  box-shadow: 0 1px 0 var(--basic-white);
+}
+
+.services-list {
+  list-style: none;
+}
+
+.service-item {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.service-delivery {
+  background-image: url("../img/bg-delivery.png");
+}
+
+.service-guarantee {
+  background-image: url("../img/bg-warranty.png");
+}
+
+.service-credit {
+  background-image: url("../img/bg-credit.png");
+}
+
+.subtitle {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
 }
 
 .transport-companies-list {
