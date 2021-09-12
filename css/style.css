@@ -77,6 +77,7 @@
   --special-lilac: #dc91d8;
   --special-lightgrey: #f9f5f0;
   --special-grey: #405069;
+  --special-grey-light: #f7f3ec;
 }
 
 .visually-hidden {
@@ -353,11 +354,11 @@ img {
 }
 
 .special-offers-list h3 {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
 }
 
@@ -365,6 +366,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
+
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -404,21 +406,21 @@ img {
 }
 
 .slide-title {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  text-transform: uppercase;
   font-size: 36px;
   line-height: 36px;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
+  text-transform: uppercase;
 }
 
 .slide-excerpt {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
 }
 
@@ -443,12 +445,13 @@ img {
 }
 
 .services-btn {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
+
   background-color: var(--basic-blue);
   border: none;
   box-shadow: 0 1px 0 var(--basic-grey-extra-dark), inset 0 1px 0 var(--special-grey);
@@ -462,6 +465,7 @@ img {
 
 .services-btn-current {
   color: var(--basic-blue);
+
   background-color: var(--basic-white);
   box-shadow: 0 1px 0 var(--basic-white);
 }
@@ -488,13 +492,13 @@ img {
 }
 
 .subtitle {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
-  text-transform: uppercase;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-blue);
+  text-transform: uppercase;
 }
 
 .transport-companies-list {
@@ -555,6 +559,37 @@ img {
   background-color: var(--basic-blue-light);
 }
 
+.filters-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+
+  background-color: var(--special-grey-light);
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.price-controls {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.price-controls input[type="text"] {
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-black);
+
+  background-color: var(--special-grey-light);
+  border: none;
+}
+
 .filters legend {
   font-style: normal;
   font-weight: 700;
@@ -579,6 +614,57 @@ img {
 .filter-input-checkbox:disabled + label,
 .filter-input-radio:disabled + label {
   opacity: 0.4;
+}
+
+.sorting {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: var(--special-grey-light);
+}
+
+.sorting ul {
+  list-style: none;
+}
+
+.sorting input {
+  display: none;
+}
+
+.filter-option label {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted rgba(238, 54, 67, 0.3);
+}
+
+.filter-option label:hover,
+.filter-option label:focus {
+  color: var(--basic-black);
+
+  border-bottom: 1px solid var(--basic-red);
+}
+
+.filter-option label:active {
+  color: var(--basic-red);
+
+  border-bottom: none;
+}
+
+input:checked + label,
+input:checked + label:hover,
+input:checked + label:focus,
+input:checked + label:active {
+  color: var(--basic-red);
+
+  border: none;
+}
+
+.sort-price-list label,
+.sort-price-list label:hover,
+.sort-price-list label:focus,
+.sort-price-list label:active {
+  border: none;
 }
 
 .catalog-btn {
@@ -695,6 +781,21 @@ img {
   text-decoration: none;
 
   background-color: var(--basic-red);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item-current .catalog-btn {
+  color: var(--basic-white);
+
+  background-color: var(--basic-red);
+  border-color: var(--basic-red);
+}
+
+.about-punchers {
+  background-color: var(--basic-grey-light);
 }
 
 .main-footer {

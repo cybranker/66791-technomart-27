@@ -108,7 +108,7 @@
               <div class="price-controls">
                 <label class="visually-hidden" for="input-min-price">Минимальная цена:</label>
                 <input class="form-control" type="text" id="input-min-price" value="0" name="min-price" maxlength="6">
-                -
+                &ndash;
                 <label class="visually-hidden" for="input-max-price">Максимальная цена:</label>
                 <input class="form-control" type="text" id="input-max-price" value="30000" name="max-price" maxlength="6">
               </div>
@@ -173,14 +173,20 @@
                 <label for="sort-functionality">по функционалу</label>
               </li>
             </ul>
-            <ul>
+            <ul class="sort-price-list">
               <li class="filter-option">
                 <input type="radio" name="sort-price" value="expensive" id="sort-price-expensive" checked>
-                <label class="visually-hidden" for="sort-price-expensive"> От дорогих к дешевым</label>
+                <label for="sort-price-expensive">
+                  <span class="visually-hidden">От дорогих к дешевым</span>
+                  &#11205;
+                </label>
               </li>
               <li class="filter-option">
                 <input type="radio" name="sort-price" value="cheap" id="sort-price-cheap">
-                <label class="visually-hidden" for="sort-price-cheap"> От дешевых к дорогим</label>
+                <label for="sort-price-cheap">
+                  <span class="visually-hidden">От дешевых к дорогим</span>
+                  &#11206;
+                </label>
               </li>
             </ul>
           </section>
@@ -305,16 +311,16 @@
 
           <ul class="pagination-list">
             <li class="pagination-item pagination-item-current">
-              <a>1</a>
+              <a class="btn catalog-btn">1</a>
             </li>
             <li class="pagination-item">
-              <a href="blank.html">2</a>
+              <a class="btn catalog-btn" href="blank.html">2</a>
             </li>
             <li class="pagination-item">
-              <a href="blank.html">3</a>
+              <a class="btn catalog-btn" href="blank.html">3</a>
             </li>
             <li class="pagination-item">
-              <a href="blank.html">Следующая</a>
+              <a class="btn catalog-btn" href="blank.html">Следующая</a>
             </li>
           </ul>
         </section>
