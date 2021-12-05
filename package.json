@@ -1,8 +1,20 @@
 {
+    "name": "Technomart",
+    "private": true,
+    "description": "Проект для тренировки верстки «Техномарт» от HTML Academy",
     "scripts": {
-        "test": "htmlhint *.html"
+        "start": "browser-sync start --server '' --no-notify --no-ui --cwd '' --files '*.html,css/**/*,js/**/*'",
+        "test": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'",
+        "build": "del-cli dist && copyfiles -a *.html css/*.css js/*.js fonts/**/* dist",
+        "html": "htmlhint *.html",
+        "deploy": "cd dist && rsync --archive --compress --delete . cybranker@178.21.11.3:/var/www/cybranker.ru/html/technomart"
     },
     "devDependencies": {
+        "browser-sync": "^2.27.7",
+        "copyfiles": "^2.4.1",
+        "del-cli": "^4.0.1",
+        "editorconfig-checker": "^4.0.2",
+        "htmlhint": "^1.0.0",
         "stylelint": "^13.13.1",
         "stylelint-config-htmlacademy": "^0.1.10"
     }
