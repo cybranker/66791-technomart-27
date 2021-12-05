@@ -5,9 +5,9 @@
     "scripts": {
         "start": "browser-sync start --server '' --no-notify --no-ui --cwd '' --files '*.html,css/**/*,js/**/*'",
         "test": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'",
-        "build": "del-cli dist && copyfiles -a *.html css/*.css js/*.js fonts/**/* dist",
+        "build": "del-cli dist && copyfiles -e 'img/README' -a *.html css/*.css js/*.js fonts/**/* img/**/* dist",
         "html": "htmlhint *.html",
-        "deploy": "cd dist && rsync --archive --compress --delete . cybranker@178.21.11.3:/var/www/cybranker.ru/html/technomart"
+        "deploy": "npm run build && cd dist && rsync --archive --compress --delete . cybranker@178.21.11.3:/var/www/cybranker.ru/html/technomart"
     },
     "devDependencies": {
         "browser-sync": "^2.27.7",
